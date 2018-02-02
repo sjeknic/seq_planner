@@ -71,17 +71,27 @@ class Plasmid:
     def seq_finder(self):
         self.find_full_seq(self.target_range[0], 1, [])
         
-        rep = input('Replace an oligo (input oligo number, 0 to exit)? ')
-
-        if rep != 0:
-            plasmid.num_iters = 0
-            plasmid.complete_reads = []
-            plasmid.rem_oligo(rep)
-            plasmid.seq_finder()
+        if len(self.complete_reads)>=1:
+            self.print_reads()
+            self.replacer()
         else:
-            return
+        	self.no_path()
 
-    
+    def replacer(self):
+    	rep = input('Replace an oligo (input oligo number, 0 to exit)? ')
+
+    	if rep != 0:
+    		try:
+    			plasmid.rem_oligo(rep)
+    			plasmid.num_iters = 0
+    			plasmid.complete_reads = []
+    			plasmid.seq_finder()
+    		except:
+    			print "Oligo not found"
+    			self.replacer()
+    	else:
+    		return
+
     def find_last_odd(self, curr, lowlim):
         all_rem_odds = [x for x in self.blank_range[lowlim+1:curr] if x%2==1]
         
@@ -106,17 +116,15 @@ class Plasmid:
             curr_ind = self.blank_range.index(next_odd + 1)
             
             if curr_ind >= self.target_range[1]:
-
                 self.complete_reads.append(list(path))
-                self.print_reads()
-                return
+                return 
             
             else:
 
                 self.find_full_seq(curr_ind, next_low, path)
                 
         else:
-            self.no_path()
+            return 
     
     def rem_oligo(self, oli):
         self.blank_range[self.blank_range.index(oli)] = 0
@@ -130,8 +138,10 @@ class Plasmid:
             print '--------------'
 
     def no_path(self):
+
+    	# TODO	
         print 'no path found'
-        return
+        return 0
         #add functionality here
         #should describe missing range and exit function
             
