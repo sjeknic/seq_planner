@@ -23,6 +23,8 @@ class Plasmid:
         self.oligo_locs = {}
         self.num_iters = 0
         self.partial_reads = []
+        self.read = []
+
         
     def range_int(self, st, en):
     	if st < 1:
@@ -83,7 +85,7 @@ class Plasmid:
         self.find_full_seq(self.target_range[0], 1, [])
         
         if len(self.complete_reads)>=1:
-            self.print_reads()
+            self.print_reads(self.complete_reads)
             self.replacer()
         else:
         	self.no_path()
@@ -91,7 +93,7 @@ class Plasmid:
     def replacer(self):
     	rep = input('Replace an oligo (input oligo number, 0 to exit)? ')
 
-    	if rep != 0:
+    	if rep != 0 and rep % 2 == 1:
     		try:
     			plasmid.rem_oligo(rep)
     			plasmid.num_iters = 0
@@ -100,6 +102,9 @@ class Plasmid:
     		except:
     			print "Oligo not found"
     			self.replacer()
+    	elif rep % 2 == 0:
+    		print "Oligo not found"
+    		self.replacer()
     	else:
     		return
 
@@ -141,8 +146,8 @@ class Plasmid:
         self.blank_range[self.blank_range.index(oli)] = 0
         self.blank_range[self.blank_range.index(oli+1)] = 0
         
-    def print_reads(self):
-        for read in self.complete_reads:
+    def print_reads(self, readlist):
+        for read in readlist:
             print '--------------'
             for item in read:
                 print str(item) + ": " + str(self.oligo_list[item])
@@ -167,16 +172,29 @@ class Plasmid:
     	future_odds = [x for x in self.blank_range[curr:] if x%2==1]
     	return self.blank_range.index(future_odds[0])
 
+    def coverage(self):
+    	for p in self.partial_reads:
+    		st = self.blank_range.index(p[0])
+    		en = self.blank_range.index(p[-1] + 1)
+    		self.read.append(list([st,en]))
+
     def no_path(self):
 
     	# TODO			
         print 'No complete path found'
         self.find_empty_ranges()
+        self.coverage()
+        self.print_reads(self.partial_reads)
         
-        print self.partial_reads
-        return 0
-        #add functionality here
-        #should describe missing range and exit function
+        print "The following ranges are covered by the above: "
+        print " "
+
+        for r in self.read:
+        	print "Pos " + str(r[0]) + " to Pos " + str(r[1])
+		
+		# ADD functionality for uncovered ranges      
+
+        return 
             
 class Oligos:
     def __init__(self, oliglist, br=50, rr=750):
@@ -230,11 +248,14 @@ with open('Export_-_2018-01-17/Sequetech_Primers_-_2018-01-17.csv', 'rb') as f:
     reader = csv.reader(f)
     seqoligos = list(reader)
 
+#PRIMER REMOVAL BASED ON NAME AND LENGTH SHOULD HAPPEN HERE
 elim = input('Use ELIM primers (0, 1)? ')
 if elim == 1:
     alloligolist = sjoligos + kltkoligos + elimoligos + seqoligos
 elif elim == 0:
     alloligolist = sjoligos + kltkoligos + seqoligos
+
+
 
 names = [item[0] for item in alloligolist]
 sequences = [item[1] for item in alloligolist]
@@ -249,6 +270,8 @@ if adj == 1:
 else:
     o = Oligos(oligolist)
 
+print "Total oligos found: " + str(len(oligolist))
+print "Usable oligos found: " + str(len(o.oligos))
 
 with open('plasmid.txt', 'r') as f:
     plasmid_sequence = f.read()
