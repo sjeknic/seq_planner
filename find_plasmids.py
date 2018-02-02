@@ -22,8 +22,19 @@ class Plasmid:
         self.complete_reads = []
         self.oligo_locs = {}
         self.num_iters = 0
+        self.partial_reads = []
         
     def range_int(self, st, en):
+    	if st < 1:
+    		st = input("Start too low, pick new start. ")
+    		self.range_int(st, en)
+    	elif st > en:
+    		st = input("Start larger than end, pick new start. ")
+    		self.range_int(st, en)
+    	elif en > len(self.sequence):
+    		en = input("End out of range, pick new end. ")
+    		self.range_int(st, en)
+
         self.target_seq = copy(self.sequence[st-1:en-1])
         self.target_range = [st-1, en] 
         
@@ -112,7 +123,6 @@ class Plasmid:
         if next_odd != '':
 
             path.append(next_odd)
-
             curr_ind = self.blank_range.index(next_odd + 1)
             
             if curr_ind >= self.target_range[1]:
@@ -124,6 +134,7 @@ class Plasmid:
                 self.find_full_seq(curr_ind, next_low, path)
                 
         else:
+            self.partial_reads.append(list(path))
             return 
     
     def rem_oligo(self, oli):
@@ -137,10 +148,32 @@ class Plasmid:
                 print str(item) + ": " + str(self.oligo_list[item])
             print '--------------'
 
+    def find_empty_ranges(self):
+        last_end = self.blank_range.index(self.partial_reads[-1][-1] + 1)
+        next_start = self.find_next_odd(last_end)
+
+        if next_start >= self.target_range[1] or next_start <= self.target_range[0]:
+        	return
+
+        self.find_full_seq(next_start+1, last_end, [])
+
+        if len(self.complete_reads) == 1:
+        	self.partial_reads.append(list(self.complete_reads[0]))
+        	return
+        else:
+        	self.find_empty_ranges()
+        
+    def find_next_odd(self, curr):
+    	future_odds = [x for x in self.blank_range[curr:] if x%2==1]
+    	return self.blank_range.index(future_odds[0])
+
     def no_path(self):
 
-    	# TODO	
-        print 'no path found'
+    	# TODO			
+        print 'No complete path found'
+        self.find_empty_ranges()
+        
+        print self.partial_reads
         return 0
         #add functionality here
         #should describe missing range and exit function
@@ -159,7 +192,7 @@ class Oligos:
         return [x for x in oliglist if len(x[1]) < 35 and len(x[1]) > 15]
     
     def remove_name(self, oliglist):
-        return [x for x in oligolist if len(x[0]) <= 12]
+        return [x for x in oligolist if len(x[0]) <= 13]
         
     def find_bind(self):
     	#Would be nice to also find binding spots that are off by 1 nucleotide
