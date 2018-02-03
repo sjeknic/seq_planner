@@ -1,8 +1,7 @@
-import numpy as np
 import csv
-from copy import copy
 import re
-import sys
+from tabulate import tabulate
+#ADD TABLE FUNCTIONALITY
 
 def complementary(seq):
     test_seq = seq.replace('G','c')
@@ -25,7 +24,6 @@ class Plasmid:
         self.partial_reads = []
         self.read = []
 
-        
     def range_int(self, st, en):
     	if st < 1:
     		st = input("Start too low, pick new start. ")
@@ -37,15 +35,15 @@ class Plasmid:
     		en = input("End out of range, pick new end. ")
     		self.range_int(st, en)
 
-        self.target_seq = copy(self.sequence[st-1:en-1])
         self.target_range = [st-1, en] 
         
     def copy_pattern(self, oligos):
         #find each primers range
-        #odd= start, even = end
+        #odd = start, even = end
         count = 1
         for i, o in enumerate(oligos):
             if self.blank_range[o[4][0]] == 0:
+            	print o
                 self.blank_range[o[4][0]] = count
                 self.oligo_list[count] = [o[0], o[3]]
                 self.oligo_locs[count] = [o[4][0], o[4][1]]
@@ -93,7 +91,9 @@ class Plasmid:
     def replacer(self):
     	rep = input('Replace an oligo (input oligo number, 0 to exit)? ')
 
-    	if rep != 0 and rep % 2 == 1:
+    	if rep == 0:
+    		return
+    	elif rep % 2 == 1:
     		try:
     			plasmid.rem_oligo(rep)
     			plasmid.num_iters = 0
@@ -105,8 +105,6 @@ class Plasmid:
     	elif rep % 2 == 0:
     		print "Oligo not found"
     		self.replacer()
-    	else:
-    		return
 
     def find_last_odd(self, curr, lowlim):
         all_rem_odds = [x for x in self.blank_range[lowlim+1:curr] if x%2==1]
@@ -150,7 +148,7 @@ class Plasmid:
         for read in readlist:
             print '--------------'
             for item in read:
-                print str(item) + ": " + str(self.oligo_list[item])
+                print str(item) + ": " + str(self.oligo_list[item]) + str(self.oligo_locs[item])
             print '--------------'
 
     def find_empty_ranges(self):
@@ -197,7 +195,7 @@ class Plasmid:
         return 
             
 class Oligos:
-    def __init__(self, oliglist, br=50, rr=750):
+    def __init__(self, oliglist, br=40, rr=750):
         self.oligos = self.remove_size(oliglist)
         self.oligos = self.remove_name(oliglist)
         self.oligos = zip([item[0] for item in self.oligos], [item[1].upper() for item in self.oligos], [item[1].upper()[::-1] for item in self.oligos])
@@ -226,25 +224,35 @@ class Oligos:
         if b == []:
             return '-', [br[0]-self.read_range, br[0]-self.buff_range]
         elif br == []:
-            return '+', [b[0]+self.buff_range, b[0]+self.read_range]
+        	# NEEDS TO BE FIXED
+        	# WHAT IF PRIMER EXTENDS BEYOND RANGE
+
+            l = len(plasmid.sequence)
+
+            if b[0] + self.buff_range >= l:
+            	return '+', [(b[0]+self.buff_range) - l , (b[0]+self.read_range) - l]
+            elif b[0] + self.read_range >= l:
+            	return '+', [b[0]+self.buff_range, (b[0]+self.read_range) - l]
+            else:
+                return '+', [b[0]+self.buff_range, b[0]+self.read_range]
 
 
 
 
 
-with open('Export_-_2018-01-17/Oligos_-_2018-01-17.csv', 'rb') as f:
+with open('Export_-_2018-02-03/Oligos_-_2018-02-03.csv', 'rb') as f:
     reader = csv.reader(f)
     sjoligos = list(reader)
     
-with open('Export_-_2018-01-17/My_Oligos_-_2018-01-17.csv', 'rb') as f:
+with open('Export_-_2018-02-03/My_Oligos_-_2018-02-03.csv', 'rb') as f:
     reader = csv.reader(f)
     kltkoligos = list(reader)
     
-with open('Export_-_2018-01-17/Elim_Primers_-_2018-01-17.csv', 'rb') as f:
+with open('Export_-_2018-02-03/Elim_Primers_-_2018-02-03.csv', 'rb') as f:
     reader = csv.reader(f)
     elimoligos = list(reader)
     
-with open('Export_-_2018-01-17/Sequetech_Primers_-_2018-01-17.csv', 'rb') as f:
+with open('Export_-_2018-02-03/Sequetech_Primers_-_2018-02-03.csv', 'rb') as f:
     reader = csv.reader(f)
     seqoligos = list(reader)
 
@@ -263,23 +271,32 @@ oligolist = zip(names, sequences)
 
 adj = input('Adjust primer ranges (0, 1)? ')
 if adj == 1:
-    buff = input('Buffer range (default = 50)? ')
+    buff = input('Buffer range (default = 40)? ')
     ran = input('Read range (default = 750)? ')
     
     o = Oligos(oligolist, buff, ran)
 else:
     o = Oligos(oligolist)
 
+print ""
 print "Total oligos found: " + str(len(oligolist))
 print "Usable oligos found: " + str(len(o.oligos))
+
+
 
 with open('plasmid.txt', 'r') as f:
     plasmid_sequence = f.read()
 
 plasmid = Plasmid(plasmid_sequence.upper())
+
+print ""
+print "Plasmid length: " + str(len(plasmid.sequence)) + " bp"
+print ""
+
 range_start = input('Start of range? ')
 range_end = input('End of range? ')
 plasmid.range_int(range_start,range_end)
 o.find_bind()
+
 plasmid.copy_pattern(o.binders)
 plasmid.seq_finder()
