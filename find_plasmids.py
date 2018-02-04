@@ -43,10 +43,9 @@ class Plasmid:
         count = 1
         for i, o in enumerate(oligos):
             if self.blank_range[o[4][0]] == 0:
-            	print o
                 self.blank_range[o[4][0]] = count
                 self.oligo_list[count] = [o[0], o[3]]
-                self.oligo_locs[count] = [o[4][0], o[4][1]]
+                self.oligo_locs[count] = [o[4][0], o[4][1], o[5]]
                 
                 count += 1
                 self.blank_range[o[4][1]] = count
@@ -56,7 +55,7 @@ class Plasmid:
                 
                 self.blank_range[new_odd] = count
                 self.oligo_list[count] = [o[0], o[3]]
-                self.oligo_locs[count] = [new_odd, new_even]
+                self.oligo_locs[count] = [new_odd, new_even, o[5]]
                 
                 count += 1
                 self.blank_range[new_even] = count
@@ -120,7 +119,10 @@ class Plasmid:
     def find_full_seq(self, curr_ind, low_ind, path):
         
         self.num_iters += 1
-        
+
+        if self.num_iters == 50:
+        	return
+
         [next_odd, next_low] = self.find_last_odd(curr_ind, low_ind)
 
         if next_odd != '':
@@ -137,7 +139,9 @@ class Plasmid:
                 self.find_full_seq(curr_ind, next_low, path)
                 
         else:
-            self.partial_reads.append(list(path))
+            print path
+            if path not in self.partial_reads:
+            	self.partial_reads.append(list(path))
             return 
     
     def rem_oligo(self, oli):
@@ -146,15 +150,22 @@ class Plasmid:
         
     def print_reads(self, readlist):
         for read in readlist:
-            print '--------------'
+
+            headers = ['Oligo ID', 'Oligo Name', 'Direction', 'Binding Location']
+        	
+            table = []
             for item in read:
-                print str(item) + ": " + str(self.oligo_list[item]) + str(self.oligo_locs[item])
-            print '--------------'
+                table.append([str(item), self.oligo_list[item][0], self.oligo_list[item][1], self.oligo_locs[item][2]])
+
+
+            print ""
+
+            print tabulate(table, headers = headers)
 
     def find_empty_ranges(self):
         last_end = self.blank_range.index(self.partial_reads[-1][-1] + 1)
         next_start = self.find_next_odd(last_end)
-
+        print last_end, next_start
         if next_start >= self.target_range[1] or next_start <= self.target_range[0]:
         	return
 
@@ -168,6 +179,11 @@ class Plasmid:
         
     def find_next_odd(self, curr):
     	future_odds = [x for x in self.blank_range[curr:] if x%2==1]
+        print future_odds
+        if future_odds == []:
+            print 1
+            future_odds = [x for x in self.blank_range if x%2==1]
+
     	return self.blank_range.index(future_odds[0])
 
     def coverage(self):
@@ -197,7 +213,7 @@ class Plasmid:
 class Oligos:
     def __init__(self, oliglist, br=40, rr=750):
         self.oligos = self.remove_size(oliglist)
-        self.oligos = self.remove_name(oliglist)
+        self.oligos = self.remove_name(self.oligos)
         self.oligos = zip([item[0] for item in self.oligos], [item[1].upper() for item in self.oligos], [item[1].upper()[::-1] for item in self.oligos])
         
         self.binders = []
@@ -205,10 +221,10 @@ class Oligos:
         self.read_range = rr
         
     def remove_size(self, oliglist):
-        return [x for x in oliglist if len(x[1]) < 35 and len(x[1]) > 15]
+        return [x for x in oliglist if len(x[1]) < 35 and len(x[1]) >= 18]
     
     def remove_name(self, oliglist):
-        return [x for x in oligolist if len(x[0]) <= 13]
+        return [x for x in oliglist if len(x[0]) <= 13]
         
     def find_bind(self):
     	#Would be nice to also find binding spots that are off by 1 nucleotide
@@ -218,15 +234,12 @@ class Oligos:
         
             if len(bind) + len(bind_rev) == 1:
                 direction, ran = self.pattern(bind, bind_rev)
-                self.binders.append((o[0], o[1], o[2], direction, ran))
+                self.binders.append((o[0], o[1], o[2], direction, ran, max(bind, bind_rev)))
         
     def pattern(self, b, br):
         if b == []:
             return '-', [br[0]-self.read_range, br[0]-self.buff_range]
         elif br == []:
-        	# NEEDS TO BE FIXED
-        	# WHAT IF PRIMER EXTENDS BEYOND RANGE
-
             l = len(plasmid.sequence)
 
             if b[0] + self.buff_range >= l:
@@ -257,6 +270,7 @@ with open('Export_-_2018-02-03/Sequetech_Primers_-_2018-02-03.csv', 'rb') as f:
     seqoligos = list(reader)
 
 #PRIMER REMOVAL BASED ON NAME AND LENGTH SHOULD HAPPEN HERE
+print ""
 elim = input('Use ELIM primers (0, 1)? ')
 if elim == 1:
     alloligolist = sjoligos + kltkoligos + elimoligos + seqoligos
