@@ -283,7 +283,7 @@ class Oligos:
             else:
                 return '+', [b[0] + self.buff_range, b[0] + self.read_range]
 
-
+# THIS SHOULD BE CHANGED TO USE GLOB
 with open('Export_-_2018-02-03/Oligos_-_2018-02-03.csv', 'rb') as f:
     reader = csv.reader(f)
     sjoligos = list(reader)
@@ -333,6 +333,7 @@ print "Usable oligos found: " + str(len(o.oligos))
 
 with open('plasmid.txt', 'r') as f:
     plasmid_sequence = f.read()
+    plasmid_sequence = plasmid_sequence.strip()
 
 plasmid = Plasmid(plasmid_sequence.upper())
 
@@ -340,8 +341,8 @@ print ""
 print "Plasmid length: " + str(len(plasmid.sequence)) + " bp"
 print ""
 
-range_start = input('Start of range? ')
-range_end = input('End of range? ')
+range_start = input('Start of range: ')
+range_end = input('End of range: ')
 plasmid.range_int(range_start, range_end)
 o.find_bind()
 
