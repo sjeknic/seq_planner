@@ -166,12 +166,22 @@ class Plasmid:
 
         for read in readlist:
 
-            headers = ['Oligo ID', 'Oligo Name', 'Direction', 'Binding Location']
+            headers = ['Oligo ID', 'Oligo Name', 'Direction', 'Binding Location', 'Approx. Read Range', 'Overlap']
 
             table = []
             for item in read:
-                table.append([str(item), self.oligo_list[item][0], self.oligo_list[item][1],
-                             self.oligo_locs[item][2]])
+                oligoid = str(item)
+                oligoname = self.oligo_list[item][0]
+                direction = self.oligo_list[item][1]
+                bindloc = self.oligo_locs[item][2]
+                readran = [self.oligo_locs[item][0], self.oligo_locs[item][1]]
+
+                if len(table) >= 1:
+                    overlap = table[-1][-2][-1] - readran[0]
+                else:
+                    overlap = '-'
+
+                table.append([oligoid, oligoname, direction, bindloc, readran, overlap])
 
             print ""
             print tabulate(table, headers=headers)
@@ -240,7 +250,7 @@ class Plasmid:
 
 class Oligos:
 
-    def __init__(self, oliglist, br=40, rr=750):
+    def __init__(self, oliglist, br=40, rr=850):
 
         self.oligos = self.remove_size(oliglist)
         self.oligos = self.remove_name(self.oligos)
@@ -270,6 +280,7 @@ class Oligos:
                 self.binders.append((o[0], o[1], o[2], direction, ran, max(bind, bind_rev)))
 
     def pattern(self, b, br):
+        # READ RANGE SHOULD BE UPDATED TO READ LENGTH
 
         if b == []:
             return '-', [br[0] - self.read_range, br[0] - self.buff_range]
@@ -320,7 +331,7 @@ oligolist = zip(names, sequences)
 adj = input('Adjust primer ranges (0, 1)? ')
 if adj == 1:
     buff = input('Buffer range (default = 40)? ')
-    ran = input('Read range (default = 750)? ')
+    ran = input('Read range (default = 850)? ')
 
     o = Oligos(oligolist, buff, ran)
 else:
