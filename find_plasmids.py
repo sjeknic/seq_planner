@@ -90,6 +90,8 @@ class Plasmid:
         self.find_full_seq(self.target_range[0], 1, [])
 
         if len(self.complete_reads) >= 1:
+            print ""
+            print "*** COMPLETE READ FOUND ***"
             self.print_reads(self.complete_reads)
             self.replacer()
         else:
@@ -97,7 +99,8 @@ class Plasmid:
 
     def replacer(self):
 
-        rep = input('Replace an oligo (input oligo number, 0 to exit)? ')
+        print ""
+        rep = input('Replace an oligo (input Oligo ID, 0 to exit)? ')
 
         if rep == 0:
             return
@@ -142,8 +145,11 @@ class Plasmid:
                 self.complete_reads.append(list(path))
                 return
 
-            else:
+            elif curr_ind <= self.blank_range.index(next_odd):
+            	self.complete_reads.append(list(path))
+            	return
 
+            else:
                 self.find_full_seq(curr_ind, next_low, path)
 
         else:
@@ -208,20 +214,28 @@ class Plasmid:
 
     def no_path(self):
         # NEED TO UPDATE IF COMPLETE READ NOT FOUND AFTER OLIGO REMOVAL
-
-        print 'No complete path found'
+        
+        print "" 
+        print '*** NO COMPLETE READ FOUND ***'
+        print "These oligos will sequence part of the target range"
         self.find_empty_ranges()
         self.coverage()
         self.print_reads(self.partial_reads)
-
+        
+        print " "
         print "The following ranges are covered by the above: "
         print " "
 
 
         # NEED TO UPDATE RANGE DESCRIPTION FOR LONG READS
         for r in self.read:
-            print "Pos " + str(r[0]) + " to Pos " + str(r[1])
+            if r[1] < r[0]:
+                print "Pos " +str(r[0]) + " to End"
+            else:
+            	print "Pos " + str(r[0]) + " to Pos " + str(r[1])
 
+
+        print ""
         return
 
 class Oligos:
@@ -288,11 +302,15 @@ with open('Export_-_2018-02-03/Sequetech_Primers_-_2018-02-03.csv', 'rb') as f:
 
 # PRIMER REMOVAL BASED ON NAME AND LENGTH SHOULD HAPPEN HERE
 print ""
-elim = input('Use ELIM primers (0, 1)? ')
-if elim == 1:
+company = input('Comapny primers? (1: Sequetech, 2: ELIM, 3: Both, 4: Neither) ')
+if company == 3:
     alloligolist = sjoligos + kltkoligos + elimoligos + seqoligos
-elif elim == 0:
+elif company == 1:
     alloligolist = sjoligos + kltkoligos + seqoligos
+elif company == 2:
+	alloligolist = sjoligos + kltkoligos + elimoligos
+else:
+	alloligolist = sjoligos + kltkoligos
 
 
 names = [item[0] for item in alloligolist]
