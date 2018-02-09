@@ -173,7 +173,7 @@ class Plasmid:
                 oligoid = str(item)
                 oligoname = self.oligo_list[item][0]
                 direction = self.oligo_list[item][1]
-                bindloc = self.oligo_locs[item][2]
+                bindloc = self.oligo_locs[item][2][0]
                 readran = [self.oligo_locs[item][0], self.oligo_locs[item][1]]
 
                 if len(table) >= 1:
