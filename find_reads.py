@@ -1,7 +1,9 @@
 import csv
 import re
 from tabulate import tabulate
-#ADD TABLE FUNCTIONALITY
+from glob import glob
+from os.path import join
+
 
 
 def complementary(seq):
@@ -146,8 +148,8 @@ class Plasmid:
                 return
 
             elif curr_ind <= self.blank_range.index(next_odd):
-            	self.complete_reads.append(list(path))
-            	return
+                self.complete_reads.append(list(path))
+                return
 
             else:
                 self.find_full_seq(curr_ind, next_low, path)
@@ -242,7 +244,7 @@ class Plasmid:
             if r[1] < r[0]:
                 print "Pos " +str(r[0]) + " to End"
             else:
-            	print "Pos " + str(r[0]) + " to Pos " + str(r[1])
+                print "Pos " + str(r[0]) + " to Pos " + str(r[1])
 
 
         print ""
@@ -295,33 +297,57 @@ class Oligos:
                 return '+', [b[0] + self.buff_range, b[0] + self.read_range]
 
 # THIS SHOULD BE CHANGED TO USE GLOB
-with open('Export_-_2018-02-03/Oligos_-_2018-02-03.csv', 'rb') as f:
-    reader = csv.reader(f)
-    sjoligos = list(reader)
 
-with open('Export_-_2018-02-03/My_Oligos_-_2018-02-03.csv', 'rb') as f:
-    reader = csv.reader(f)
-    kltkoligos = list(reader)
+files = glob(join('*Export*','*'))
 
-with open('Export_-_2018-02-03/Elim_Primers_-_2018-02-03.csv', 'rb') as f:
-    reader = csv.reader(f)
-    elimoligos = list(reader)
+otheroligos = []
+for f in files:
 
-with open('Export_-_2018-02-03/Sequetech_Primers_-_2018-02-03.csv', 'rb') as f:
-    reader = csv.reader(f)
-    seqoligos = list(reader)
+    with open(f,'rb') as sheet:
+        reader = csv.reader(sheet)
+
+        if 'Sequetech' in f:
+            seqoligos = list(reader)
+        elif 'Elim' in f:
+            elimoligos = list(reader)
+        else:
+            l = list(reader)
+            otheroligos += l
+
+
+
+
+
+
+
+
+# with open('Export_-_2018-02-03/Oligos_-_2018-02-03.csv', 'rb') as f:
+#     reader = csv.reader(f)
+#     sjoligos = list(reader)
+
+# with open('Export_-_2018-02-03/My_Oligos_-_2018-02-03.csv', 'rb') as f:
+#     reader = csv.reader(f)
+#     kltkoligos = list(reader)
+
+# with open('Export_-_2018-02-03/Elim_Primers_-_2018-02-03.csv', 'rb') as f:
+#     reader = csv.reader(f)
+#     elimoligos = list(reader)
+
+# with open('Export_-_2018-02-03/Sequetech_Primers_-_2018-02-03.csv', 'rb') as f:
+#     reader = csv.reader(f)
+#     seqoligos = list(reader)
 
 # PRIMER REMOVAL BASED ON NAME AND LENGTH SHOULD HAPPEN HERE
 print ""
 company = input('Comapny primers? (1: Sequetech, 2: ELIM, 3: Both, 4: Neither) ')
 if company == 3:
-    alloligolist = sjoligos + kltkoligos + elimoligos + seqoligos
+    alloligolist = otheroligos + elimoligos + seqoligos
 elif company == 1:
-    alloligolist = sjoligos + kltkoligos + seqoligos
+    alloligolist = otheroligos + seqoligos
 elif company == 2:
-	alloligolist = sjoligos + kltkoligos + elimoligos
+    alloligolist = otheroligos + elimoligos
 else:
-	alloligolist = sjoligos + kltkoligos
+    alloligolist = otheroligos
 
 
 names = [item[0] for item in alloligolist]
