@@ -314,29 +314,6 @@ for f in files:
             l = list(reader)
             otheroligos += l
 
-
-
-
-
-
-
-
-# with open('Export_-_2018-02-03/Oligos_-_2018-02-03.csv', 'rb') as f:
-#     reader = csv.reader(f)
-#     sjoligos = list(reader)
-
-# with open('Export_-_2018-02-03/My_Oligos_-_2018-02-03.csv', 'rb') as f:
-#     reader = csv.reader(f)
-#     kltkoligos = list(reader)
-
-# with open('Export_-_2018-02-03/Elim_Primers_-_2018-02-03.csv', 'rb') as f:
-#     reader = csv.reader(f)
-#     elimoligos = list(reader)
-
-# with open('Export_-_2018-02-03/Sequetech_Primers_-_2018-02-03.csv', 'rb') as f:
-#     reader = csv.reader(f)
-#     seqoligos = list(reader)
-
 # PRIMER REMOVAL BASED ON NAME AND LENGTH SHOULD HAPPEN HERE
 print ""
 company = input('Comapny primers? (1: Sequetech, 2: ELIM, 3: Both, 4: Neither) ')
