@@ -5,7 +5,6 @@ from glob import glob
 from os.path import join
 
 
-
 def complementary(seq):
 
     test_seq = seq.replace('G', 'c')
@@ -178,6 +177,9 @@ class Plasmid:
                 bindloc = self.oligo_locs[item][2][0]
                 readran = [self.oligo_locs[item][0], self.oligo_locs[item][1]]
 
+                if readran[0] < 0:
+                    readran[0] = len(self.sequence) + readran[0]
+
                 if len(table) >= 1:
                     overlap = table[-1][-2][-1] - readran[0]
                 else:
@@ -225,30 +227,27 @@ class Plasmid:
             self.read.append(list([st, en]))
 
     def no_path(self):
-        # NEED TO UPDATE IF COMPLETE READ NOT FOUND AFTER OLIGO REMOVAL
-        
-        print "" 
+
+        print ""
         print '*** NO COMPLETE READ FOUND ***'
         print "These oligos will sequence part of the target range"
         self.find_empty_ranges()
         self.coverage()
         self.print_reads(self.partial_reads)
-        
+
         print " "
         print "The following ranges are covered by the above: "
         print " "
 
-
-        # NEED TO UPDATE RANGE DESCRIPTION FOR LONG READS
         for r in self.read:
             if r[1] < r[0]:
-                print "Pos " +str(r[0]) + " to End"
+                print "Pos " + str(r[0]) + " to End"
             else:
                 print "Pos " + str(r[0]) + " to Pos " + str(r[1])
 
-
         print ""
         return
+
 
 class Oligos:
 
@@ -256,7 +255,9 @@ class Oligos:
 
         self.oligos = self.remove_size(oliglist)
         self.oligos = self.remove_name(self.oligos)
-        self.oligos = zip([item[0] for item in self.oligos], [item[1].upper() for item in self.oligos], [item[1].upper()[::-1] for item in self.oligos])
+        self.oligos = zip([item[0] for item in self.oligos],
+                          [item[1].upper() for item in self.oligos],
+                          [item[1].upper()[::-1] for item in self.oligos])
 
         self.binders = []
         self.buff_range = br
@@ -296,9 +297,8 @@ class Oligos:
             else:
                 return '+', [b[0] + self.buff_range, b[0] + self.read_range]
 
-# THIS SHOULD BE CHANGED TO USE GLOB
 
-files = glob(join('*Export*','*'))
+files = glob(join('*Export*', '*'))
 
 otheroligos = []
 for f in files:
