@@ -120,6 +120,8 @@ class Plasmid:
 
     def find_last_odd(self, curr, lowlim):
 
+        # NEED TO UPDATE TO INCLUDE PRIMERS THAT START BEFORE BASE 0
+
         all_rem_odds = [x for x in self.blank_range[lowlim+1:curr] if x % 2 == 1]
 
         if all_rem_odds == []:
@@ -192,6 +194,7 @@ class Plasmid:
 
     def find_empty_ranges(self):
 
+        # FIX OUT OF RANGE ERROR THAT I GET ON THIS INDEX
         last_end = self.blank_range.index(self.partial_reads[-1][-1] + 1)
 
         if last_end <= self.blank_range.index(self.partial_reads[-1][-1]):
@@ -230,14 +233,19 @@ class Plasmid:
 
         print ""
         print '*** NO COMPLETE READ FOUND ***'
-        print "These oligos will sequence part of the target range"
-        self.find_empty_ranges()
-        self.coverage()
-        self.print_reads(self.partial_reads)
 
-        print " "
-        print "The following ranges are covered by the above: "
-        print " "
+        try:
+            self.find_empty_ranges()
+            self.coverage()
+            print "These oligos will sequence part of the target range"
+            self.print_reads(self.partial_reads)
+            print " "
+            print "The following ranges are covered by the above: "
+            print " "
+        except:
+            print "No useful oligo binding locations found."
+        
+
 
         for r in self.read:
             if r[1] < r[0]:
