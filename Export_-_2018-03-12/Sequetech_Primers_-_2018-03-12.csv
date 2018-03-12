@@ -7,7 +7,7 @@ t103,ctgatTGCgttgtcgctgctcagagggg,,,"[TK152 from TK046 T475A AktSubstrate_PFKFB2
 t102,gacaacGCAatcaggaggcctaggaactacagc,,,"[TK152 from TK046 T475A AktSubstrate_PFKFB2, +, 553, 585]"
 TempTest1,CGGCCTTTTTACGGTTCCTG,,,
 TriEXDOWN.3,TCGATCTCAGTGGTATTTG,,,
-attL2,GTAACATCAGAGATTTTGAGACAC,,,"[pSJ21 - pENTR: ddGFPa-3xNLS_2A_JNKKTR-ddGFPb_2A_H2B-mRuby_PGK-Puro, -, 5561, 5584], [pSJ37 - pENTR: mouse p65 promoter_p50-mcClover_2A_H2B-iRFP670, -, 6165, 6188], [pSJ128 - pENTR: PGK_HIF1a_Bagnall et al Linker_mClover (K729T), -, 5141, 5164], [pSJ97 - pENTR: HIF1a_Bagnall et al Linker_mClover_2A_H2B-mRuby, -, 5801, 5824], [pSJ121 - pENTR: PGK_HIF1a_Bagnall et al Linker_mClover_2A_H2B-mRuby, -, 6350, 6373], [pSJ130 - pENTR: PGK_HIF1a (Δ796-836)_Bagnall et al Linker_mClover, -, 5018, 5041], [pSJ124 - pENTR: PGK_mClover_HIF1a, -, 5051, 5074], [pSJ125 - pENTR: PGK_mClover_Bagnall et al Linker_HIF1a, -, 5141, 5164], [pSJ37a - pENTR: mouse p65 promoter_p50-mcClover_2A_H2B-iRFP670, -, 6162, 6185], [test pSJ97 - pENTR: HIF1a_Bagnall et al Linker_mClover_2A_H2B-mRuby, -, 5801, 5824], ...more sites present"
+attL2,GTAACATCAGAGATTTTGAGACAC,,,"[test pSJ97 - pENTR: HIF1a_Bagnall et al Linker_mClover_2A_H2B-mRuby, -, 5801, 5824], [pSJ160 - pENTR: mClover_Bagnall et al Linker_HIF1a, -, 4592, 4615], [pSJ37a - pENTR: mouse p65 promoter_p50-mcClover_2A_H2B-iRFP670, -, 6162, 6185], [pSJ123 - pENTR: PGK_HIF1a_Bagnall et al Linker_mClover, -, 5141, 5164], [pSJ128 - pENTR: PGK_HIF1a_Bagnall et al Linker_mClover (K729T), -, 5141, 5164], [pSJ130 - pENTR: PGK_HIF1a (Δ796-836)_Bagnall et al Linker_mClover, -, 5018, 5041], [pSJ22 - pENTR: HIF1a_GGGGS_Venus_2A_H2B-mRuby, -, 1776, 1799], [pSJ124 - pENTR: PGK_mClover_HIF1a, -, 5051, 5074], [pSJ121 - pENTR: PGK_HIF1a_Bagnall et al Linker_mClover_2A_H2B-mRuby, -, 6350, 6373], [pSJ37 - pENTR: mouse p65 promoter_p50-mcClover_2A_H2B-iRFP670, -, 6165, 6188], ...more sites present"
 GAL4BD,TCATCGGAAGAGAGTAG,,,
 PFLU-DW,AGGGTCAAGGAAGGCACGGGGGAG,,,
 pASKF,GAGTTATTTTACCACTCCCT,,,"[pwtCas9-sc101ts, +, 1501, 1520], [pwtCas9-sc101ts [8343-7812], +, 1501, 1520]"
@@ -23,7 +23,7 @@ T7SELECTDOWN,AACCCCTCAAGACCCGTTTA,,,
 T7gilmore,ATAGTTCCTCCTTTCAGC,,,
 GFPreverse,CGTCGCCGTCCAGCTCGACCAG,,,
 GFPRevUS,GGCCATGGAACAGGTAGT,,,
-GLprimer1,TGTATCTTATGGTACTGTAACTG,,,"[pSJ139: pGL2: HRE-luciferase, -, 3056, 3078], [pSJ140: pGL2: HRE-mCherry, -, 2114, 2136]"
+GLprimer1,TGTATCTTATGGTACTGTAACTG,,,"[pSJ140: pGL2: HRE-mCherry, -, 2114, 2136], [pSJ139: pGL2: HRE-luciferase, -, 3056, 3078]"
 HaloTag.R,ACGCTCGCCCAGGACTTC,,,
 GLprimer2,CTTTATGTTTTTGGCGTCTTCCA,,,
 pCRII F2,GCTTCCCAACCTTACCAGAG,,,
@@ -35,7 +35,7 @@ pEE5,GGATCTTCCATACCTACC,,,
 PDEST10,GTTCTAGTGGTTGGCTACGTATA,,,
 PGEX2T.START,TGCGCCGACATCATAACG,,,
 pET-15b5,ATGCGTCCGGCGTAGAGG,,,
-pGEX3,CCGGGAGCTGCATGTGTCAGAGG,,,"[TK605 pUC19 CamR in the middle of Amp (does not exist), +, 634, 656], [pSJ73 - pMC.BESPX-MCS2, +, 3606, 3628], [pSJ91 - pMC.BESPX-MCS2_crSJ6 (mouse nfkb1)_IRES_H2B-Clover-LoxP, +, 1480, 1502], [pSJ89 - pMC.BESPX-MCS2_crSJ4 (mouse nfkb1)_IRES_H2B-Clover-LoxP, +, 1480, 1502], [pSJ90 - pMC.BESPX-MCS2_crSJ5 (mouse nfkb1)_IRES_H2B-Clover-LoxP, +, 1480, 1502]"
+pGEX3,CCGGGAGCTGCATGTGTCAGAGG,,,"[pSJ89 - pMC.BESPX-MCS2_crSJ4 (mouse nfkb1)_IRES_H2B-Clover-LoxP, +, 1480, 1502], [pSJ91 - pMC.BESPX-MCS2_crSJ6 (mouse nfkb1)_IRES_H2B-Clover-LoxP, +, 1480, 1502], [pSJ73 - pMC.BESPX-MCS2, +, 3606, 3628], [TK605 pUC19 CamR in the middle of Amp (does not exist), +, 634, 656], [pSJ90 - pMC.BESPX-MCS2_crSJ5 (mouse nfkb1)_IRES_H2B-Clover-LoxP, +, 1480, 1502]"
 pFUSE.F,TGTCCGGCGCTCCCTTGG,,,
 pGL35,ATCAAAACAAAACGAAAC,,,
 PIRES-A3,CGCCCTAGATGCATGCTC,,,
@@ -54,7 +54,7 @@ pPGK,GGGAGGAGTAGAAGGTGG,,,
 TriEX2197.5,GCCTTCTGGTCTGGTCCC,,,
 pShuttle3,CAGGTTCAGGGGGAGGTG,,,
 pShuttle5,CAGAGCTGGTTTAGTGAA,,,
-pRLTK.R,CGACACGGAAATGTTGAA,,,"[pwtCas9-sc101ts, +, 686, 703], [pwtCas9-sc101ts [8343-7812], +, 686, 703], [pWT_gRNA-sc101ts, +, 2056, 2073]"
+pRLTK.R,CGACACGGAAATGTTGAA,,,"[pwtCas9-sc101ts, +, 686, 703], [pWT_gRNA-sc101ts, +, 2056, 2073], [pwtCas9-sc101ts [8343-7812], +, 686, 703]"
 pSuperF,GGAAGCCTTGGCTTTTG,,,
 pTRE5,CGCCTGGAGACGCCATCC,,,
 pTRIEX-3Neo3,ACACCAGCCACCACCTTC,,,
@@ -92,7 +92,7 @@ U6+275,TGGAAAGGACGAAACACC,,,
 LacZRev,AGGCACCCCAGGCTTTAC,,,
 INSECT-DEST39REV,ATGTGGTTTCGTGGATTC,,,
 Neo.C,TTAACAAAGTATGACAGG,,,
-Neo-F,TGGGCACAACAGACAATC,,,"[pSJ91 - pMC.BESPX-MCS2_crSJ6 (mouse nfkb1)_IRES_H2B-Clover-LoxP, -, 5588, 5605], [pSJ73 - pMC.BESPX-MCS2, -, 1648, 1665], [pSJ90 - pMC.BESPX-MCS2_crSJ5 (mouse nfkb1)_IRES_H2B-Clover-LoxP, -, 5588, 5605], [pSJ89 - pMC.BESPX-MCS2_crSJ4 (mouse nfkb1)_IRES_H2B-Clover-LoxP, -, 5588, 5605]"
+Neo-F,TGGGCACAACAGACAATC,,,"[pSJ90 - pMC.BESPX-MCS2_crSJ5 (mouse nfkb1)_IRES_H2B-Clover-LoxP, -, 5588, 5605], [pSJ73 - pMC.BESPX-MCS2, -, 1648, 1665], [pSJ89 - pMC.BESPX-MCS2_crSJ4 (mouse nfkb1)_IRES_H2B-Clover-LoxP, -, 5588, 5605], [pSJ91 - pMC.BESPX-MCS2_crSJ6 (mouse nfkb1)_IRES_H2B-Clover-LoxP, -, 5588, 5605]"
 Neo-R,TGGATACTTTCTCGGCAG,,,
 pCAT3proFor,CAAAACAAAACGAAACAA,,,
 pCEP4Fwd,CAGAGCTCGTTTAGTGAACCG,,,
@@ -116,7 +116,7 @@ Psi.F,GGTGAAGGGCCTCCACTT,,,
 28gIII,GTATGGGATTTTGCTAAACAAC,,,
 3CMVFW,GGTCTATATAAGCAGAGC,,,
 3end,GGATCGCGAAAACTGTGG,,,
-3pLG112,CCATATAAATCAGCATCC,,,"[pSJ123 - pENTR: PGK_HIF1a_Bagnall et al Linker_mClover, -, 5290, 5307], [pSJ131 - pENTR: HIF1a-middle-VenusPest, -, 4130, 4147], [pSJ141 - pENTR: mouse p65 promoter_mClover-(GGGGS)x2-p50, -, 4914, 4931], [pSJ125 - pENTR: PGK_mClover_Bagnall et al Linker_HIF1a, -, 5290, 5307], [pSJ142 - pENTR: mClover-(GGGGS)x2-p50, -, 3483, 3500], [pSJ143 - pENTR: mouse p65 promoter_p50-(GGGS)x2-mClover, -, 4914, 4931]"
+3pLG112,CCATATAAATCAGCATCC,,,"[pSJ147 - pENTR: HREx3-mCherry, -, 2498, 2515], [pSJ160 - pENTR: mClover_Bagnall et al Linker_HIF1a, -, 4741, 4758], [pSJ131 - pENTR: HIF1a-middle-VenusPest, -, 4130, 4147], [pSJ143 - pENTR: mouse p65 promoter_p50-(GGGS)x2-mClover, -, 4914, 4931], [pSJ159 - pENTR: HIF1a_Bagnall et al Linker_mClover, -, 4741, 4758], [pSJ141 - pENTR: mouse p65 promoter_mClover-(GGGGS)x2-p50, -, 4914, 4931], [pSJ142 - pENTR: mClover-(GGGGS)x2-p50, -, 3483, 3500], [pSJ151 - pENTR: HREx3-mCherry-PEST, -, 2624, 2641], [pSJ16 - pENTR: PGK_mClover_Bagnall et al Linker_HIF1a, -, 5290, 5307], [pSJ123 - pENTR: PGK_HIF1a_Bagnall et al Linker_mClover, -, 5290, 5307], ...more sites present"
 5AOX,GACTGGTTCCAATTGACAA,,,
 5ProLar,GTGAGCGCTCACAATTATG,,,
 3END2,TTGCCGTAATGAGTGACC,,,
@@ -126,7 +126,7 @@ Ac5Forward,GACACAAAGCCGCTCCATCAG,,,
 AD3-5,GCGTTTGGAATCACTACAGG,,,
 AP4,CCCCTGTGAGGAACT,,,
 MATCHMAKERBD3,CGTTTTAAAACCTAAGAGTCAC,,,
-PJR,TTGAATATGGCTCATAACACCCCTTG,,,"[pSJ146 - pENTR: p50-middleClover (E285-V291), -, 3422, 3447]"
+PJR,TTGAATATGGCTCATAACACCCCTTG,,,"[pSJ159 - pENTR: HIF1a_Bagnall et al Linker_mClover, -, 4680, 4705], [pSJ146 - pENTR: p50-middleClover (E285-V291), -, 3422, 3447]"
 NEW1.3b,CTTGCGGGGTTTTTCAGTA,,,
 p221F,GACGGCCAGTCTTAAGCTCGGG,,,
 oQE31-III,CGGATAACAATTTCACACAG,,,"[pCA24N (ASKA), +, 139, 158]"
@@ -141,7 +141,7 @@ RseqPrimer,GATACTGGACGCGAGC,,,
 RVprimer3,CTAGCAAAATAGGCTGTCCC,,,
 SG53,TAAGCTGCAATAAACAAG,,,
 SP6,ATTTAGGTGACACTATAG,,,
-attL1.AP,CCTTTTTGCGTTTCTACA,,,"[TK441 pLenti Blast (gateway from TK427 - pENTR: mouse p65 promoter_Patl1(DNASU)-mClover_2A_H2B-mRuby2), +, 997, 1014], [pSJ102 - pENTR: mouse p65 promoter_p65-(GGGS)x2-mClover_T2A_H2B-mRuby2, +, 997, 1014], [pSJ90 - pMC.BESPX-MCS2_crSJ5 (mouse nfkb1)_IRES_H2B-Clover-LoxP, +, 341, 358], [TK552 HIF1a-middle-VenusPest_2A_H2B-mRuby, +, 759, 776], [pSJ89 - pMC.BESPX-MCS2_crSJ4 (mouse nfkb1)_IRES_H2B-Clover-LoxP, +, 341, 358], [pSJ146 - pENTR: p50-middleClover (E285-V291), +, 1021, 1038], [test pSJ97 - pENTR: HIF1a_Bagnall et al Linker_mClover_2A_H2B-mRuby, +, 995, 1012], [pSJ70 - pENTR: IRES_H2B-Clover-LoxP, +, 405, 422], [TK434 - pENTR: mouse p65 promoter_Patl1(DNASU)-mClover_2A_H2B-mRuby2 mut2, +, 997, 1014], [TK489 (pLenti Puro gateway from TK433 - pENTR: mouse p65 promoter_Patl1(DNASU)-mClover_2A_H2B-mRuby2 mut1), +, 997, 1014], ...more sites present"
+attL1.AP,CCTTTTTGCGTTTCTACA,,,"[pSJ102 - pENTR: mouse p65 promoter_p65-(GGGS)x2-mClover_T2A_H2B-mRuby2, +, 997, 1014], [pSJ127 - pENTR: PGK_HIF1a_Bagnall et al Linker_mClover (L397A, L400A), +, 995, 1012], [TK569 pLenti PGK Hygro (gateway from TK552 HIF1a-middle-VenusPest_2A_H2B-mRuby), +, 759, 776], [pSJ112 - pENTR: hPGK_p65-(GGGS)x2-mClover_2A_H2B-mRuby2, +, 997, 1014], [TK498 (pLenti Blast gateway from TK434 - pENTR: mouse p65 promoter_Patl1(DNASU)-mClover_2A_H2B-mRuby2 mut2), +, 997, 1014], [pSJ73 - pMC.BESPX-MCS2, +, 2467, 2484], [pSJ160 - pENTR: mClover_Bagnall et al Linker_HIF1a, +, 995, 1012], [pSJ25 - pENTR: HIF1a_GGGGS_3xGFP11(15aa linker)_2A_H2B-mRuby, +, 759, 776], [pSJ83 - pENTR: mouse p65 promoter_p50-(GGGS)x2-mClover_2A_H2B-mRuby2, +, 997, 1014], [pSJ85 - pENTR: mouse p65 promoter_cRel-(GGGS)x2-mClover_2A_H2B-mRuby2, +, 997, 1014], ...more sites present"
 BacRev2,GCTTCATCGTGTCGGGTTTA,,,
 attL1,TCGCGTTAACGCTAGCATGGATCTC,,,
 BaculoRev.,CAACAACGCACAGAATCTAGC,,,
@@ -158,7 +158,7 @@ FastBacFwd,GTTTTCGTAACAGTTTTG,,,
 FastBacFwdB,TTCCTTCCGGTATTGTCTCC,,,
 EGFP-380,AGGGCGAGGGCGATGCCACCTA,,,"[pSJ131 - pENTR: HIF1a-middle-VenusPest, +, 1826, 1847]"
 FastBacRev,AGGGGGAGGTGTGGGAGG,,,
-EGFP-Cnew,CATGGTCCTGCTGGAGTTCGTG,,,"[pSJ125 - pENTR: PGK_mClover_Bagnall et al Linker_HIF1a, +, 2357, 2378], [pSJ141 - pENTR: mouse p65 promoter_mClover-(GGGGS)x2-p50, +, 3265, 3286], [pSJ142 - pENTR: mClover-(GGGGS)x2-p50, +, 1834, 1855], [pSJ131 - pENTR: HIF1a-middle-VenusPest, +, 2382, 2403]"
+EGFP-Cnew,CATGGTCCTGCTGGAGTTCGTG,,,"[pSJ160 - pENTR: mClover_Bagnall et al Linker_HIF1a, +, 1808, 1829], [pSJ16 - pENTR: PGK_mClover_Bagnall et al Linker_HIF1a, +, 2357, 2378], [pSJ142 - pENTR: mClover-(GGGGS)x2-p50, +, 1834, 1855], [pSJ131 - pENTR: HIF1a-middle-VenusPest, +, 2382, 2403], [pSJ125 - pENTR: PGK_mClover_Bagnall et al Linker_HIF1a, +, 2357, 2378], [pSJ141 - pENTR: mouse p65 promoter_mClover-(GGGGS)x2-p50, +, 3265, 3286]"
 FastBacRevB,TTTAATTCAACCCAACACAA,,,
 f-xa.11,GGTCCTGCAACTTTATCC,,,
 f-xa.13,GCTCATCATTGGAAAACG,,,
@@ -170,7 +170,7 @@ f-xa.C,GAACGTTTTCCAATGATG,,,
 f-xa.A,GAGCCCCCGATTTAGAGC,,,
 f-xa.G,AAAAACCACCGCTACCAG,,,
 f-xa.N,TCAAGCTTGTCGTCATCG,,,
-f-xa.E,GGAGGCGGATAAAGTTGC,,,"[pWT_gRNA-sc101ts, -, 1437, 1454], [pwtCas9-sc101ts, -, 67, 84], [pwtCas9-sc101ts [8343-7812], -, 67, 84]"
+f-xa.E,GGAGGCGGATAAAGTTGC,,,"[pwtCas9-sc101ts, -, 67, 84], [pwtCas9-sc101ts [8343-7812], -, 67, 84], [pWT_gRNA-sc101ts, -, 1437, 1454]"
 f-xa.J,TAGTCCTGTCGGGTTTCG,,,"[pSJ153 - pLenti: mouse p65 promoter_mClover-(GGGGS)x2-p50, -, 8753, 8770]"
 GADREV,GTTGAAGTGAACTTGCGGGG,,,
 f-xa.P,CCAAGTGGGCAGTTTACC,,,
@@ -192,8 +192,8 @@ Mono.F,TCTTAGCGGTTCAAAGGT,,,
 Mono.R,CCCACGGCCGTCATGCTC,,,
 MT-Upstream,CAGCAGCAAAATCAAGTG,,,
 Neo.11,TGTTGTGCCCAGTCATAG,,,
-Neo.15,GGCGATAGAAGGCGATGC,,,"[pSJ73 - pMC.BESPX-MCS2, +, 960, 977], [pSJ89 - pMC.BESPX-MCS2_crSJ4 (mouse nfkb1)_IRES_H2B-Clover-LoxP, +, 4900, 4917], [pSJ90 - pMC.BESPX-MCS2_crSJ5 (mouse nfkb1)_IRES_H2B-Clover-LoxP, +, 4900, 4917], [pSJ91 - pMC.BESPX-MCS2_crSJ6 (mouse nfkb1)_IRES_H2B-Clover-LoxP, +, 4900, 4917]"
-Neo.13,GCTGACCGCTTCCTCGTG,,,"[pSJ73 - pMC.BESPX-MCS2, -, 1009, 1026], [pSJ89 - pMC.BESPX-MCS2_crSJ4 (mouse nfkb1)_IRES_H2B-Clover-LoxP, -, 4949, 4966], [pSJ90 - pMC.BESPX-MCS2_crSJ5 (mouse nfkb1)_IRES_H2B-Clover-LoxP, -, 4949, 4966], [pSJ91 - pMC.BESPX-MCS2_crSJ6 (mouse nfkb1)_IRES_H2B-Clover-LoxP, -, 4949, 4966]"
+Neo.15,GGCGATAGAAGGCGATGC,,,"[pSJ73 - pMC.BESPX-MCS2, +, 960, 977], [pSJ90 - pMC.BESPX-MCS2_crSJ5 (mouse nfkb1)_IRES_H2B-Clover-LoxP, +, 4900, 4917], [pSJ89 - pMC.BESPX-MCS2_crSJ4 (mouse nfkb1)_IRES_H2B-Clover-LoxP, +, 4900, 4917], [pSJ91 - pMC.BESPX-MCS2_crSJ6 (mouse nfkb1)_IRES_H2B-Clover-LoxP, +, 4900, 4917]"
+Neo.13,GCTGACCGCTTCCTCGTG,,,"[pSJ91 - pMC.BESPX-MCS2_crSJ6 (mouse nfkb1)_IRES_H2B-Clover-LoxP, -, 4949, 4966], [pSJ89 - pMC.BESPX-MCS2_crSJ4 (mouse nfkb1)_IRES_H2B-Clover-LoxP, -, 4949, 4966], [pSJ73 - pMC.BESPX-MCS2, -, 1009, 1026], [pSJ90 - pMC.BESPX-MCS2_crSJ5 (mouse nfkb1)_IRES_H2B-Clover-LoxP, -, 4949, 4966]"
 Neo.17,GCACGAGGAAGCGGTCAG,,,
 Neo.23,TGAAGCGTGCGAGAATGC,,,
 Neo.25,CGTCCTGCAGTTCATTCA,,,
@@ -221,7 +221,7 @@ pGEX5,GGGCTGGCAAGCCACGTTTGGTG,,,
 pIRES23,ACACCGGCCTTATTCCAA,,,
 pFUSE.R,CCACGCATGTGACCTCAG,,,
 pIEX4F,TGTTGGATATTGTTTCAG,,,
-PJF,GCGAGAGTAGGGAACTGCCAGGCATC,,,"[TK361 pLenti Puro (gateway from TK354 pENTR truncmutFoxo-mCerulean3-P2Av3-ERK-mRuby2-P2Amod-H2B-iRFP670), +, 6229, 6254], [TK383 pENTR H2B-mCerulean3-E2-V5-HSV-P2A-NWS-Gap43-E-Clover-NES without extra spaces before H2B, +, 78, 103], [KB001 NEMO clover, +, 78, 103], [cand, +, 595, 620], [TK308 pENTR mutFoxo-Clover-P2Av3-ERK-iRFP670-H2B-2A-mRuby2, +, 5665, 5690], [TK309 pLenti pGK Blast (gateway from TK308 pENTR mutFoxo-Clover-P2Av3-ERK-iRFP670-H2B-2A-mRuby2)), +, 3033, 3058], [TK432 pLenti CMV Blast (gateway from TK291 pENTR ERK-iRFP670-2A-H2B-mRuby2), +, 595, 620], [TK339 pENTR mutp53-Clover (EGFP?)-2A-H2B-iRFP670 L25Q/W26S/F53Q/F54S, +, 595, 620], [TK302 pENTR GFP-GSK3MAPK-H2B-2A-mRuby2, +, 595, 620], [TK358 pENTR mCerulean3-MK2-P2Av3-ERK-mRuby2-P2Amod-H2B-iRFP670, +, 6319, 6344], ...more sites present"
+PJF,GCGAGAGTAGGGAACTGCCAGGCATC,,,"[TK265 pLenti pGK Puro (gateway from TK261 pENTR p53-Clover-H2B-2A-mRuby2), +, 595, 620], [TK302 pENTR GFP-GSK3MAPK-H2B-2A-mRuby2, +, 595, 620], [TK276 pENTR mutp53-Clover (EGFP?)-H2B-2A-mRuby2 L25Q/W26S/F53Q/F54S, +, 595, 620], [TK359 pENTR p105-mCerulean3-H2B-2A-mRuby2 (does not exist), +, 735, 760], [TK278 pENTR mutFoxo-Clover-P2Av3-ERK-mCerulean3-H2B-2A-mRuby2 (does not exist), +, 6372, 6397], [TK343 pENTR truncated-mutFoxo-Clover-P2Av3-ERK-iRFP670-H2B-2A-mRuby2 (lot of homology), +, 6211, 6236], [TK261 pENTR p53-Clover-H2B-2A-mRuby2 (EGFP?), +, 595, 620], [TK393 pLenti CMV Blast (gateway from TK357 pENTR truncmutFoxo-mCerulean3-P2Av3-truncCrtc2-mRuby2-P2Amod-H2B-iRFP670), +, 7741, 7766], [TK367 pLenti PGK Puro (gateway from TK357 pENTR truncmutFoxo-mCerulean3-P2Av3-truncCrtc2-mRuby2-P2Amod-H2B-iRFP670), +, 7741, 7766], [TK321 pLenti pGK Puro (gateway from TK302 pENTR GFP-GSK3MAPK-H2B-2A-mRuby2), +, 595, 620], ...more sites present"
 PM3,ATGTGGTATGGCTGATTATG,,,
 PMYR3,CTTCCTTTTCGGTTAGAG,,,
 pJT4-5.5,GTTAACGATACCAGCCTC,,,

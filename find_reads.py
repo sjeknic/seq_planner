@@ -244,8 +244,6 @@ class Plasmid:
             print " "
         except:
             print "No useful oligo binding locations found."
-        
-
 
         for r in self.read:
             if r[1] < r[0]:
@@ -324,6 +322,7 @@ for f in files:
 
 # PRIMER REMOVAL BASED ON NAME AND LENGTH SHOULD HAPPEN HERE
 print ""
+# ADD QUINTARA PRIMERS
 company = input('Comapny primers? (1: Sequetech, 2: ELIM, 3: Both, 4: Neither) ')
 if company == 3:
     alloligolist = otheroligos + elimoligos + seqoligos

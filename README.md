@@ -26,7 +26,8 @@ In the future I want to change the functionality such that the script attempts m
 
 Currently, the script starts at the 5' end and finds only the read that uses the fewest primers. 
  
-Primers are found using csv files from Benchling exports, therefore only primers made before the last export will be included.
+Primers are found using csv files from Benchling exports, therefore only primers made before the last export will be included. You can export data as an oligo spreadsheet using Benchling functions, however, if two folders are named the same (e.g. "My oligos"), only one will be included, so they must be exported one at a time and then moved to the same folder.
+
 After a read, the user is given the option of removing oligos they do not want to use. The script will remove this oligo entirely and attempt to find a new read de novo, therefore mutliple oligos may change.
 
 If the script fails to find a complete read, oligos that read part of the range will be presented, as well as the regions that the script expects will not be read. 
