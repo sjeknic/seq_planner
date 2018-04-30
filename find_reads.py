@@ -2,6 +2,8 @@ import csv
 import re
 from tabulate import tabulate
 from glob import glob
+#import os 
+#will need it for window resizing
 from os.path import join
 
 
@@ -15,6 +17,7 @@ def complementary(seq):
     test_seq = test_seq.replace('t', 'T')
     return test_seq
 
+# ADD FUNCTIONALITY FOR TERMINAL WINDOW RESIZE
 
 class Plasmid:
 
@@ -120,7 +123,8 @@ class Plasmid:
 
     def find_last_odd(self, curr, lowlim):
 
-        # NEED TO UPDATE TO INCLUDE PRIMERS THAT START BEFORE BASE 0
+        # NEED TO UPDATE TO INCLUDE PRIMERS THAT START BEFORE BASE 0 (without causing recursive error)
+        # UPDATE TO INCLUDE PRIMER PREFERENCES
 
         all_rem_odds = [x for x in self.blank_range[lowlim+1:curr] if x % 2 == 1]
 
