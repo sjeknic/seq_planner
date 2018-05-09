@@ -46,6 +46,7 @@ class Plasmid:
             self.range_int(st, en)
 
         self.target_range = [st - 1, en]
+        self.read_length = en - st
 
     def copy_pattern(self, oligos):
         # Find each primers range
@@ -96,6 +97,13 @@ class Plasmid:
         if len(self.complete_reads) >= 1:
             print ""
             print "*** COMPLETE READ FOUND ***"
+
+            basesper = self.read_length / len(self.complete_reads[0])
+            print ""
+            print "Read length: " + str(self.read_length)
+            print "Avg bases per primer: " + str(basesper)
+            print ""
+
             self.print_reads(self.complete_reads)
             self.replacer()
         else:
@@ -193,8 +201,8 @@ class Plasmid:
 
                 table.append([oligoid, oligoname, direction, bindloc, readran, overlap])
 
-            print ""
             print tabulate(table, headers=headers)
+
 
     def find_empty_ranges(self):
 
