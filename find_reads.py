@@ -269,7 +269,7 @@ class Plasmid:
 
 class Oligos:
 
-    def __init__(self, oliglist, br=36, rr=850):
+    def __init__(self, oliglist, br=36, rr=801):
 
         self.oligos = self.remove_size(oliglist)
         self.oligos = self.remove_name(self.oligos)
