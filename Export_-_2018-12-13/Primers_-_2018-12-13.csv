@@ -1,0 +1,72 @@
+prJS3,ggcggcggtcacgaact,,,
+prJS11,GGAGGAGGCGGTTCTGGCGGTGGTGGGTCAatggagggcgccggc,,,
+prJS9,aacGGTGGATCTGGCGGATCAatggtgagcaagggcgag,,,"[pJS3 HIF1a-GGSGGS_Linker-mClover, +, 3681, 3698], [pSJ159 - pENTR: HIF1a_Bagnall et al Linker_mClover, +, 3735, 3770]"
+prJS29,cgttacataacttacggtaaatggc,,,"[pJS8 JS2 with CMV instead of EF-1a, +, 919, 943]"
+prJS29,gatcaccgcgcttgagagctaaGCCTaaGCGGCCGCACTC,,,"[pJS14 pSJ173 pENTR CMV-HIF1a-H2B-miRFP670, +, 6544, 6561], [pSJ173 - pENTR: CMV_trHIF1aL795A_middle-mNeonGreen-PEST_2A_H2B-mRuby, +, 6288, 6327], [pJS13 pSJ173 pENTR CMV-HIF1a-NLS-miRFP670, +, 6163, 6180]"
+prJS24,agaggcatgacctgctaccatactagttccggatgagctgccg,,,"[pSJ173 - pENTR: CMV_trHIF1aL795A_middle-mNeonGreen-PEST_2A_H2B-mRuby, -, 5574, 5603], [pJS14 pSJ173 pENTR CMV-HIF1a-H2B-miRFP670, -, 5574, 5595]"
+prJS36,TATCCTCCTCGCCCTTGCTCACCATAGCCTGCTTTTTTGTACAAAGTTG,,,"[pJS15 mNeonGreen MOTS-c, -, 434, 457]"
+prJS37,AAATGGCAAGCGCTACCGGAG,,,"[pJS14 pSJ173 pENTR CMV-HIF1a-H2B-miRFP670, +, 3237, 3257]"
+prJS23,atggacccaAAAAAGAAGCGGA,,,"[pJS11 pENTR NLS-miRFP670, +, 515, 536], [pJS13 pSJ173 pENTR CMV-HIF1a-NLS-miRFP670, +, 5164, 5185], [pJS13 pENTR CMV-HIF1a-NLS-miRFP670, +, 4226, 4247]"
+prJS7,atggacccaAAAAAGAAGCGGAA,,,
+prJS8,GCTATGAGCTACTGCATCTTCTACC,,,
+prJS7,CCCTGGACCTatggacccaAAAAAGAAGCGGAA,,,"[pJS9 pENTR CMV-HIF1a-NLS-miRFP670, +, 5215, 5237], [pJS11 pENTR NLS-miRFP670, +, 509, 537], [TK551 pENTR NLS-mKO2, +, 509, 537], [pJS2 Hif1a-NLS-mKO2, +, 5789, 5811], [pJS2 Hif1a-NLS-mKO2, +, 5789, 5811], [pJS8 JS2 with CMV instead of EF-1a, +, 5162, 5184]"
+prJS8,CCGCttAGGCGCTATGAGCTACTGCATCTTCTACC,,,"[pJS8 JS2 with CMV instead of EF-1a, -, 5842, 5866], [pJS2 Hif1a-NLS-mKO2, -, 6469, 6493], [pJS2 Hif1a-NLS-mKO2, -, 6469, 6493], [TK551 pENTR NLS-mKO2, -, 1195, 1219]"
+prJS6,TtgggtccatAGGTCCAGGGTTCTCCTCCAC,,,"[pJS8 JS2 with CMV instead of EF-1a, -, 5141, 5161], [TK679 pENTR EF1 trHIF1aL792A-middle-mNGPest_2A_H2B-mRuby, -, 5768, 5791], [pJS2 Hif1a-NLS-mKO2, -, 5768, 5788], [pJS2 Hif1a-NLS-mKO2, -, 5768, 5788], [pJS10 pENTR CMV-HIF1a-H2B-miRFP670, -, 5194, 5214]"
+prJS5,AGCTCATAGCGCCTaaGCGGCCGCACTC,,,"[TK679 pENTR EF1 trHIF1aL792A-middle-mNGPest_2A_H2B-mRuby, +, 6935, 6952], [pJS2 Hif1a-NLS-mKO2, +, 6494, 6511], [pJS8 JS2 with CMV instead of EF-1a, +, 5867, 5884], [pJS9 pENTR CMV-HIF1a-NLS-miRFP670, +, 6214, 6231], [pJS10 pENTR CMV-HIF1a-H2B-miRFP670, +, 6595, 6612], [pJS2 Hif1a-NLS-mKO2, +, 6494, 6511]"
+prJS42,CCGGAACCttctgtgtcatcgctgccaaaatccagagagatg,,,"[gSJ4, -, 309, 349], [pSJ185 - pENTR: mCMV_trHIF1aL795A-middle-mNeonGreenPEST_2A_H2B-mRuby with 397A and 400A lysine mutations, -, 2688, 2709], [pSJ185 - pENTR: mCMV_trHIF1aL795A-middle-mNeonGreenPEST_2A_H2B-mRuby with 397A and 400A lysine mutations, -, 2688, 2709]"
+prJS41,ttcagcacgacttgattttctcccttcaacaaacagaatctgtg,,,"[pSJ185 - pENTR: mCMV_trHIF1aL795A-middle-mNeonGreenPEST_2A_H2B-mRuby with 397A and 400A lysine mutations, +, 2521, 2544], [gSJ4, +, 122, 165], [pSJ185 - pENTR: mCMV_trHIF1aL795A-middle-mNeonGreenPEST_2A_H2B-mRuby with 397A and 400A lysine mutations, +, 2521, 2544]"
+prJS39,tctctctggattttggcagcgatgacacagaaGGTTCCGG,,,"[pSJ174 - pENTR: mCMV_trHIF1aL795A-middle-mNeonGreenPEST_2A_H2B-mRuby, +, 2690, 2729], [pSJ185 - pENTR: mCMV_trHIF1aL795A-middle-mNeonGreenPEST_2A_H2B-mRuby with 397A and 400A lysine mutations, +, 2710, 2729], [pSJ185 - pENTR: mCMV_trHIF1aL795A-middle-mNeonGreenPEST_2A_H2B-mRuby with 397A and 400A lysine mutations, +, 2710, 2729]"
+prJS40,gattctgtttgttgaagggagaaaatcaagtcgtgctgaataatac,,,"[pSJ185 - pENTR: mCMV_trHIF1aL795A-middle-mNeonGreenPEST_2A_H2B-mRuby with 397A and 400A lysine mutations, -, 2495, 2520], [pSJ174 - pENTR: mCMV_trHIF1aL795A-middle-mNeonGreenPEST_2A_H2B-mRuby, -, 2495, 2540], [pSJ185 - pENTR: mCMV_trHIF1aL795A-middle-mNeonGreenPEST_2A_H2B-mRuby with 397A and 400A lysine mutations, -, 2495, 2520]"
+prJS1,GGCTCAGGAactgaagatcaaca,,,"[JS1 HIF1a-middle-Clover, +, 2413, 2435], [pJS13 pSJ173 pENTR CMV-HIF1a-NLS-miRFP670, +, 3556, 3578], [pJS1 HIF1a-middle-Clover, +, 2413, 2435]"
+prJS3,atggtgagcaagggcgagga,,,
+prJS2,GCCGGAACCttctgtgtcat,,,"[pJS1 HIF1a-middle-Clover, -, 1709, 1728], [JS1 HIF1a-middle-Clover, -, 1709, 1728]"
+prJS4,ggcggcggtcacgaactc,,,
+prJS4,tgatcttcagtTCCTGAGCCggcggcggtcacgaactc,,,"[pJS1 HIF1a-middle-Clover, -, 2395, 2412], [JS1 HIF1a-middle-Clover, -, 2395, 2412], [TK283 pENTR mouse p50-Clover, -, 3504, 3521]"
+prJS3,atgacacagaaGGTTCCGGCatggtgagcaagggcgagga,,,"[pJS1 HIF1a-middle-Clover, +, 1729, 1748], [JS1 HIF1a-middle-Clover, +, 1729, 1748], [TK283 pENTR mouse p50-Clover, +, 2838, 2857]"
+prJS2,cagggatgacacagaaGGTTCCGGCatggtgagcaag,,,
+prJS4,cgccGGCTCAGGAactgaagatcaacaacttg,,,
+prJS1,GCCGGAACCttctgtgtcat,,,
+prJS12,TGACCCACCACCGCCAGAACCGCCTCCTCCggcggcggtcacgaactc,,,
+prJS11,GGAGGTGGTGGATCTGGCGGTGGTGGATCAatggagggcgccggc,,,"[pJS4 mClover-GGSGGS_Linker-HIF1a, +, 1857, 1871]"
+prJS10,TGATCCACCACCGCCAGATCCACCACCTCCgttaacttgatccaaagctctgagt,,,"[pJS3 HIF1a-GGSGGS_Linker-mClover, -, 3638, 3662]"
+prJS12,TGATCCACCACCGCCAGATCCACCACCTCCggcggcggtcacgaactc,,,"[pJS4 mClover-GGSGGS_Linker-HIF1a, -, 1821, 1838]"
+prJS9,GGAGGTGGTGGATCTGGCGGTGGTGGATCAatggtgagcaagggcga,,,"[pJS3 HIF1a-GGSGGS_Linker-mClover, +, 3681, 3697]"
+prJS11,GGTGGATCTGGCGGATCAatggagggcgccggcg,,,"[pSJ160 - pENTR: mClover_Bagnall et al Linker_HIF1a, +, 1911, 1944], [pJS4 mClover-GGSGGS_Linker-HIF1a, +, 1857, 1872], [pSJ160 - pENTR: mClover_Bagnall et al Linker_HIF1a, +, 1251, 1263], [pSJ160 - pENTR: mClover_Bagnall et al Linker_HIF1a, +, 1927, 1944]"
+prJS10,TGATCCGCCAGATCCACCgttaacttgatccaaagctctgagtaattc,,,"[pSJ159 - pENTR: HIF1a_Bagnall et al Linker_mClover, -, 3633, 3663], [pJS3 HIF1a-GGSGGS_Linker-mClover, -, 3633, 3662]"
+prJS12,catTGATCCGCCAGATCCACCggcggcggtcacgaact,,,"[pJS4 mClover-GGSGGS_Linker-HIF1a, -, 1822, 1838], [pSJ160 - pENTR: mClover_Bagnall et al Linker_HIF1a, -, 1822, 1839], [pSJ160 - pENTR: mClover_Bagnall et al Linker_HIF1a, -, 1822, 1839]"
+prJS15,AGGCTtcgagccgcgttacataacttacggt,,,
+prJS16,ccatGGTGGAagtcggtgtcttctatggagg,,,
+prJS20,CGCttAGGCttagctctcaagcgcggtg,,,"[ppe021, -, 1920, 1944], [pJS9 pENTR CMV-HIF1a-NLS-miRFP670, -, 6195, 6213]"
+prJS19,AAACGCAAGGTGatggtagcaggtcatgcctct,,,"[pJS9 pENTR CMV-HIF1a-NLS-miRFP670, +, 5266, 5286], [ppe021, +, 991, 1011]"
+prJS15,caccgactTCCACCatggagggcgc,,,
+prJS14,tgtaacgcggctcgaAGCCTGCTTTTTTGTACAAA,,,"[pJS2 Hif1a-NLS-mKO2, -, 894, 922], [pJS2 Hif1a-NLS-mKO2, -, 894, 922]"
+prJS13,gacaccgactTCCACCatggagggcgc,,,"[pJS2 Hif1a-NLS-mKO2, +, 2070, 2091], [pJS2 Hif1a-NLS-mKO2, +, 2070, 2091]"
+prJS17,gatcaccgcgcttgagagctaaGCCTaaGCGGCCGCAC,,,"[pJS9 pENTR CMV-HIF1a-NLS-miRFP670, +, 6204, 6229]"
+prJS18,gctaccatCACCTTGCGTTTCTTCTTAGGATCG,,,
+prJS22,CCGCttAGGCttagctctcaagcgcggtg,,,"[ppe021, -, 1920, 1948], [pJS10 pENTR CMV-HIF1a-H2B-miRFP670, -, 6576, 6594]"
+prJS21,ACCCTGGACCTatgccagagccagcgaag,,,"[pJS10 pENTR CMV-HIF1a-H2B-miRFP670, +, 5215, 5232], [ppe021, +, 549, 576]"
+prJS18,gctaccatCACCTTGCGTTTCTTCTTAGGATCGA,,,"[pJS8 JS2 with CMV instead of EF-1a, -, 5187, 5217], [pJS9 pENTR CMV-HIF1a-NLS-miRFP670, -, 5240, 5265]"
+prJS16,ccatGGTGGAtcACtgacggttcactaaacg,,,"[pSJ165 - pENTR: CMV_HIF2a, -, 1647, 1676], [pJS8 JS2 with CMV instead of EF-1a, -, 1427, 1447]"
+prJS15,AGGCTtcgagcgttacataacttacggtaaatggc,,,"[pSJ165 - pENTR: CMV_HIF2a, +, 1134, 1163], [pJS8 JS2 with CMV instead of EF-1a, +, 919, 943]"
+prJS27,atggtagcaggtcatgcctct,,,"[pJS14 pSJ173 pENTR CMV-HIF1a-H2B-miRFP670, +, 5596, 5616], [ppe021, +, 991, 1011], [pJS11 pENTR NLS-miRFP670, +, 566, 586]"
+prJS26,agaggcatgacctgctaccatCACCTTGCGTTTCTTCTTAGG,,,"[pJS11 pENTR NLS-miRFP670, -, 545, 565], [TK551 pENTR NLS-mKO2, -, 545, 570]"
+prJS30,TCCGCTTCTTTTTtgggtccatAGGTCCAGGGTTCTCCTCCAC,,,"[pJS13 pSJ173 pENTR CMV-HIF1a-NLS-miRFP670, -, 5143, 5163], [pSJ173 - pENTR: CMV_trHIF1aL795A_middle-mNeonGreen-PEST_2A_H2B-mRuby, -, 5143, 5166]"
+prJS36,TGTTATCCTCCTCGCCCTTGCTCACCATCATGGTGGAGCCTGCTTTTT,,,
+prJS35,GGAGGAGATGGGTTACATTTTTCTGACCCAGCTTTCTTGTACAAAGTT,,,"[pJS15 mNeonGreen MOTS-c, +, 1214, 1236]"
+prJS13,ccgtcaGTgaTCCACCatggagggcgc,,,"[pJS8 JS2 with CMV instead of EF-1a, +, 1448, 1464]"
+prJS17,tgagagctaaGCCTaaGCGGCCGCACTC,,,"[pJS8 JS2 with CMV instead of EF-1a, +, 5867, 5884], [pJS10 pENTR CMV-HIF1a-H2B-miRFP670, +, 6595, 6612], [pJS9 pENTR CMV-HIF1a-NLS-miRFP670, +, 6214, 6231]"
+prJS17,tgagagctaaGCCTaaGCGGCCGCACTC,,,
+prJS14,ttatgtaacgctcgaAGCCTGCTTTTTTGTACAAA,,,"[pJS8 JS2 with CMV instead of EF-1a, -, 894, 918]"
+prJS32,gctctggcatAGGTCCAGGGTTCTCCTCCAC,,,"[pJS10 pENTR CMV-HIF1a-H2B-miRFP670, -, 5194, 5214], [pJS8 JS2 with CMV instead of EF-1a, -, 5141, 5164]"
+prJS38,CAGAAAAATGTAACCCATCTCCTCC,,,"[pJS15 mNeonGreen MOTS-c, -, 1189, 1213]"
+prJS28,ttagctctcaagcgcggtg,,,"[pJS14 pSJ173 pENTR CMV-HIF1a-H2B-miRFP670, -, 6525, 6543], [ppe021, -, 1920, 1938], [pJS13 pSJ173 pENTR CMV-HIF1a-NLS-miRFP670, -, 6144, 6162], [pJS11 pENTR NLS-miRFP670, -, 1495, 1513], [pJS14 pSJ173 pENTR CMV-HIF1a-H2B-miRFP670, -, 6525, 6543]"
+prJS32,CGCTTCTTTTTtgggtccatgttaacttgatccaaagctctgagt,,,"[pJS13 pENTR CMV-HIF1a-NLS-miRFP670, -, 4201, 4225]"
+prJS24,atgccagagccagcgaag,,,"[pJS14 pSJ173 pENTR CMV-HIF1a-H2B-miRFP670, +, 5164, 5181], [ppe021, +, 559, 576], [pJS14 CMV-HIF1a-H2B-miRFP670, +, 4226, 4243]"
+prJS25,acaccgcgcttgagagctaataaAGATCTCGAGCTCAAGCTT,,,"[pJS11 pENTR NLS-miRFP670, +, 1514, 1535], [TK551 pENTR NLS-mKO2, +, 1220, 1241]"
+prJS30,tcACtgacggttcactaaacg,,,"[pJS8 JS2 with CMV instead of EF-1a, -, 1427, 1447]"
+prJS31,tcaccgcgcttgagagctaaTAAGCCTaaGCGGCCGC,,,"[pJS13 pENTR CMV-HIF1a-NLS-miRFP670, +, 5225, 5241]"
+prJS17,gacttcgctggctctggcatgttaacttgatccaaagctctgagt,,,"[pJS14 CMV-HIF1a-H2B-miRFP670, -, 4201, 4225]"
+prJS33,ACGCAAGGTGatggtagcaggtcatgcctct,,,"[pJS11 pENTR NLS-miRFP670, +, 566, 586]"
+prJS34,GAGATCTttattagctctcaagcgcggtg,,,"[pJS11 pENTR NLS-miRFP670, -, 1495, 1513]"
+prJS31,tcaccgcgcttgagagctaataaAGATCTCGAGCTCAAGCTT,,,"[pJS11 pENTR NLS-miRFP670, +, 1514, 1535]"
+prJS35,GGAGGAGATGGGTTACATTTTTCTGtaaAGATCTCGAGCTCAAGCTTC,,,
