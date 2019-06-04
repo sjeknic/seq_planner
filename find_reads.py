@@ -273,6 +273,7 @@ class Oligos:
 
         self.oligos = self.remove_size(oliglist)
         self.oligos = self.remove_name(self.oligos)
+        self.oligos = self.diluted_primers(self.oligos)
         self.oligos = zip([item[0] for item in self.oligos],
                           [item[1].upper() for item in self.oligos],
                           [item[1].upper()[::-1] for item in self.oligos])
@@ -315,6 +316,29 @@ class Oligos:
             else:
                 return '+', [b[0] + self.buff_range, b[0] + self.read_range]
 
+    def diluted_primers(self, oliglist):
+
+        '''
+        Compares list of oligo names to list of diluted primers in csv and stars the primers that already have dilutions made
+        This is to make manual sorting easier, but in the future, would be nice if this also fed into the read finding algorithm
+        '''
+
+        with open('sequencing_primers.csv', 'rb') as sheet:
+            reader = csv.reader(sheet)
+            diluted_primers = list(reader)
+
+        diluted_primers = [d for p in diluted_primers for d in p]
+
+        new_list = []
+
+        for x in oliglist:
+            if x[0] in diluted_primers:
+                star_name = x[0] + '*'
+                new_list.append((star_name, x[1]))
+            else:
+                new_list.append(x)
+        
+        return new_list
 
 files = glob(join('*Export*', '*'))
 
@@ -352,7 +376,7 @@ oligolist = zip(names, sequences)
 
 adj = input('Adjust primer ranges (0, 1)? ')
 if adj == 1:
-    buff = input('Buffer range (default = 40)? ')
+    buff = input('Buffer range (default = 36)? ')
     ran = input('Read range (default = 850)? ')
 
     o = Oligos(oligolist, buff, ran)
