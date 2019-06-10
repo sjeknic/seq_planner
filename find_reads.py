@@ -269,7 +269,7 @@ class Plasmid:
 
 class Oligos:
 
-    def __init__(self, oliglist, br=36, rr=801):
+    def __init__(self, oliglist, br=36, rr=950):
 
         self.oligos = self.remove_size(oliglist)
         self.oligos = self.remove_name(self.oligos)
@@ -377,7 +377,7 @@ oligolist = zip(names, sequences)
 adj = input('Adjust primer ranges (0, 1)? ')
 if adj == 1:
     buff = input('Buffer range (default = 36)? ')
-    ran = input('Read range (default = 850)? ')
+    ran = input('Read range (default = 950)? ')
 
     o = Oligos(oligolist, buff, ran)
 else:
