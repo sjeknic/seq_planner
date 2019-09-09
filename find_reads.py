@@ -273,7 +273,13 @@ class Oligos:
 
         self.oligos = self.remove_size(oliglist)
         self.oligos = self.remove_name(self.oligos)
-        self.oligos = self.diluted_primers(self.oligos)
+        
+        #bad
+        try:
+            self.oligos = self.diluted_primers(self.oligos)
+        except:
+            pass
+
         self.oligos = zip([item[0] for item in self.oligos],
                           [item[1].upper() for item in self.oligos],
                           [item[1].upper()[::-1] for item in self.oligos])
