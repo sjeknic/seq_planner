@@ -358,6 +358,8 @@ for f in files:
             seqoligos = list(reader)
         elif 'Elim' in f:
             elimoligos = list(reader)
+        elif 'Genewiz' in f:
+            genewizoligos = list(reader)
         else:
             l = list(reader)
             otheroligos += l
@@ -365,9 +367,9 @@ for f in files:
 # PRIMER REMOVAL BASED ON NAME AND LENGTH SHOULD HAPPEN HERE
 print ""
 # ADD QUINTARA PRIMERS
-company = input('Comapny primers? (1: Sequetech, 2: ELIM, 3: Both, 4: Neither) ')
+company = input('Comapny primers? (1: Sequetech, 2: ELIM, 3: Genewiz, 4: None) ')
 if company == 3:
-    alloligolist = otheroligos + elimoligos + seqoligos
+    alloligolist = otheroligos + genewizoligos
 elif company == 1:
     alloligolist = otheroligos + seqoligos
 elif company == 2:
