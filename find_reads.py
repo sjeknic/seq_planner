@@ -2,7 +2,7 @@ import csv
 import re
 from tabulate import tabulate
 from glob import glob
-#import os 
+#import os
 #will need it for window resizing
 from os.path import join
 
@@ -269,11 +269,11 @@ class Plasmid:
 
 class Oligos:
 
-    def __init__(self, oliglist, br=36, rr=950):
+    def __init__(self, oliglist, br=36, rr=850):
 
         self.oligos = self.remove_size(oliglist)
         self.oligos = self.remove_name(self.oligos)
-        
+
         #bad
         try:
             self.oligos = self.diluted_primers(self.oligos)
@@ -343,7 +343,7 @@ class Oligos:
                 new_list.append((star_name, x[1]))
             else:
                 new_list.append(x)
-        
+
         return new_list
 
 files = glob(join('*Export*', '*'))
